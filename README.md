@@ -33,7 +33,7 @@ Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC auth
 - **How I Solved It:** Memoized derived severity counts and filtered incident arrays with useMemo while keeping row layouts lightweight.
 - **Outcome:** Smooth typing and instant filtering even with live SLA timers running across all active incidents.
 
-#### Issue 4: Client-spoofable role headers allowing unauthorized privilege escalation
+#### Issue 4: Client-spoofable role headers allowing unauthorized privilege escalation ####
 - **What Went Wrong (Symptom):** Sending a custom x-role: admin header from the browser let any unauthenticated user reopen or mutate incidents.
 - **Root Cause:** Role authorization trusted a client-supplied HTTP header instead of verifying a signed session token against database user records.
 - **How I Solved It:** Added scrypt password hashing, HMAC-SHA256 Bearer tokens, first-run workspace Admin setup, and server-side RBAC team role management persisted in PostgreSQL.
