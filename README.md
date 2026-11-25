@@ -11,7 +11,7 @@
 #### 1. Problem Statement ####
 Engineering teams tracking outages in chat threads lose track of SLA deadlines, audit trails, and who changed an incident status.
 
-#### 2. My Specific Contribution
+#### 2. My Specific Contribution ####
 Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC authentication with server-enforced RBAC (Admin/Responder/Viewer), resolution notes, and HTTP 409 rollback handling.
 
 #### 3. Issues I Faced & How I Solved Them ####
