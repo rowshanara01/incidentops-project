@@ -21,7 +21,7 @@ Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC auth
 - **How I Solved It:** Added an integer `version` column to the incidents table (`WHERE id = $1 AND version = $2`), returning HTTP 409 Conflict on mismatch and rolling back the optimistic UI update cleanly.
 - **Outcome:** Eliminated 100% of lost status transitions during concurrent multi-tab simulation.
 
-#### Issue 2: Viewer role seeing restricted mutation controls before API rejection
+#### Issue 2: Viewer role seeing restricted mutation controls before API rejection ####
 - **What Went Wrong (Symptom):** Read-only users saw enabled Resolve buttons and only learned they lacked permission after a failed network call.
 - **Root Cause:** Authorization checks lived only in backend middleware with no shared capability matrix on the frontend.
 - **How I Solved It:** Created a deterministic `canTransition(role, action)` permission policy shared across UI guards and server route checks.
