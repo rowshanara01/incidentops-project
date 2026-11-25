@@ -15,7 +15,7 @@ Engineering teams tracking outages in chat threads lose track of SLA deadlines, 
 Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC authentication with server-enforced RBAC (Admin/Responder/Viewer), resolution notes, and HTTP 409 rollback handling.
 
 #### 3. Issues I Faced & How I Solved Them
-### Issue 1: Silent overwrites when two engineers update the same incident simultaneously
+#### Issue 1: Silent overwrites when two engineers update the same incident simultaneously
 - **What Went Wrong (Symptom):** Responder A changed an incident to Mitigated while Responder B accidentally overwrote it back to Investigating with stale form data.
 - **Root Cause:** The PATCH endpoint accepted status updates blindly without verifying whether the client held the latest row version.
 - **How I Solved It:** Added an integer `version` column to the incidents table (`WHERE id = $1 AND version = $2`), returning HTTP 409 Conflict on mismatch and rolling back the optimistic UI update cleanly.
