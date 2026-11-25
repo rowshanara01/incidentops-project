@@ -27,7 +27,7 @@ Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC auth
 - **How I Solved It:** Created a deterministic `canTransition(role, action)` permission policy shared across UI guards and server route checks.
 - **Outcome:** Zero unauthorized mutation attempts from the UI while retaining strict server-side enforcement.
 
-#### Issue 3: SLA countdown timers triggering full-table re-renders every second
+#### Issue 3: SLA countdown timers triggering full-table re-renders every second ####
 - **What Went Wrong (Symptom):** Running a 1-second setInterval for SLA countdowns caused the entire incident queue and filter controls to re-render continuously, slowing input typing.
 - **Root Cause:** Storing the live clock tick in top-level state forced unrelated components to reconcile every 1,000ms.
 - **How I Solved It:** Memoized derived severity counts and filtered incident arrays with useMemo while keeping row layouts lightweight.
