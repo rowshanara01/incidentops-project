@@ -49,7 +49,7 @@ Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC auth
 - [x] `.env.example` provided with zero committed secrets
 - [x] Conventional commit history (`feat:`, `fix:`, `perf:`)
 
-#### 6. Local Setup
+#### 6. Local Setup #####
 ```bash
 git clone https://github.com/username/incidentops
 cd incidentops-rbac-incident-sla-command-center
