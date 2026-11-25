@@ -8,7 +8,7 @@
 
 ---
 
-#### 1. Problem Statement
+#### 1. Problem Statement ####
 Engineering teams tracking outages in chat threads lose track of SLA deadlines, audit trails, and who changed an incident status.
 
 #### 2. My Specific Contribution
