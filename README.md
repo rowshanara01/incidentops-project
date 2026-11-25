@@ -39,7 +39,7 @@ Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC auth
 - **How I Solved It:** Added scrypt password hashing, HMAC-SHA256 Bearer tokens, first-run workspace Admin setup, and server-side RBAC team role management persisted in PostgreSQL.
 - **Outcome:** Zero privilege escalation paths; every create, transition, note edit, reopen, and delete endpoint enforces verified server roles.
 
-## 4. Measurable Impact & Engineering Highlights
+#### 4. Measurable Impact & Engineering Highlights
 100% immutable audit coverage across every state transition, verified RBAC enforcement, and zero stale-state overwrites under concurrency.
 
 ## 5. Quality & Production Checklist
