@@ -42,7 +42,7 @@ Designed the PostgreSQL user/incident/audit schema, implemented scrypt+HMAC auth
 #### 4. Measurable Impact & Engineering Highlights
 100% immutable audit coverage across every state transition, verified RBAC enforcement, and zero stale-state overwrites under concurrency.
 
-## 5. Quality & Production Checklist
+#### 5. Quality & Production Checklist
 - [x] Live demo deployed and publicly accessible
 - [x] First-run Admin setup + automatic PostgreSQL table seeding
 - [x] Explicit loading, empty, and error fallback states
