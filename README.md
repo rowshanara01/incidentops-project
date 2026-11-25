@@ -3,7 +3,7 @@
 > Production full-stack incident workspace with scrypt+JWT auth, server-verified RBAC, optimistic conflict rollback, and PostgreSQL persistence
 
 **Live Demo:** https://incidentops-demo.example.com  
-**Tech Stack:** React · TypeScript · Node.js · Express · PostgreSQL · HMAC JWT  
+**Tech Stack:** React · TypeScript · Node.js · Express · PostgreSQL · HMAC JWT  token
 **Target Role Alignment:** Full-Stack Software Engineer
 
 ---
