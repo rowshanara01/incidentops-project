@@ -1,4 +1,4 @@
-#### IncidentOps — RBAC Incident & SLA Command Center
+#### IncidentOps — RBAC Incident & SLA Command Center ####
 
 > Production full-stack incident workspace with scrypt+JWT auth, server-verified RBAC, optimistic conflict rollback, and PostgreSQL persistence
 
